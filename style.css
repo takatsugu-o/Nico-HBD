@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Raleway:wght@300&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Pacifico', sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #000;
+    overflow: hidden;
+}
+
+.countdown {
+    font-size: 3em; /* フォントサイズを大きく */
+    color: #ff6b6b; /* 目立つ色に設定 */
+    font-weight: bold; /* 太字 */
+    letter-spacing: 1px; /* 文字間隔を調整 */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* 文字に影を追加 */
+    margin: 0;
+    padding: 10px;
+    border-radius: 8px; /* ボーダーを丸める */
+    width: 500px;
+    background: rgba(255, 255, 255, 0.8); /* 背景に少し透明度を追加 */
+}
+
+
+.background-slideshow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: cover;
+    background-position: center;
+    animation: slideshow 20s infinite;
+}
+
+@keyframes slideshow {
+    0% { background-image: url('images/GS8G3a2bIAETYDZ.jpg'); }
+    25% { background-image: url('images/GS8G3aybIAMKq6v.jpg'); }
+    50% { background-image: url('images/GS8G3aybMAARJwY.jpg'); }
+    75% { background-image: url('images/GS8G3azbIAEo01V.jpg'); }
+    100% { background-image: url('images/GS8G3a2bIAETYDZ.jpg'); }
+}
+
+.container{
+    text-align: center;
+    background: rgba(red, green, blue, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#player-container{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 200px;
+    height: 200px;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#player{
+    width: 100%;
+    height: 100%;
+}
+
+#celebration-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+#celebration-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+#celebration-container.show {
+    opacity: 1;
+}
+
+.fireworks {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/cracker.gif') center center no-repeat;
+    background-size: cover;
+    opacity: 0.4;
+    z-index: 0;
+}
+
+.celebration-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: #fff;
+}
+
+.celebration-image {
+    width: 650px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.celebration-message {
+    font-family: 'Pacifico', cursive;
+    font-size: 4em;
+    color: #fdfdfd;
+
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
